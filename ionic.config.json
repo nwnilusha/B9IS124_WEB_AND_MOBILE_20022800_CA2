@@ -1,0 +1,7 @@
+{
+  "name": "VisitIreland",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

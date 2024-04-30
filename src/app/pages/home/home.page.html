@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <ion-label style="font-weight: 400; font-size: 2em; text-align: center; font-weight: bolder; margin-top: 20dp;">Welcome Travelers</ion-label>
+  </div>
+  <div style="display: flex; flex-wrap: wrap;">
+    <div class="card" (click)="locations()">
+      <ion-img src="assets/ireland.png"/>
+      <div class="card_content">
+        <h3 class="title">Places To Visit</h3>
+      </div>
+    </div>
+    <div class="card" (click)="weather()">
+      <ion-img src="assets/weather.png"/>
+      <div class="card_content">
+        <h3 class="title">Search Current Weather</h3>
+      </div>
+    </div>
+    <div class="card" (click)="maps()">
+      <ion-img src="assets/maps.png"/>
+      <div class="card_content">
+        <h3 class="title">Check your location</h3>
+      </div>
+    </div>
+    <div class="card" (click)="camera()">
+      <ion-img src="assets/picture.png"/>
+      <div class="card_content">
+        <h3 class="title">Take a picture</h3>
+      </div>
+    </div>
+    <div class="signupLink">
+      <a style="color: #1629d5;" (click)="logOut()">Logout</a>
+    </div>
+  </div>
+  
+</ion-content>

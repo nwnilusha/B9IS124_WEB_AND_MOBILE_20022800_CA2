@@ -1,0 +1,66 @@
+
+<ion-content [fullscreen]="true">
+
+  <div class="header">
+    <!-- <ion-title>Welcome Travelers</ion-title> -->
+    <ion-label style="font-weight: 400; font-size: 2em; text-align: center; font-weight: bolder;">Welcome Travelers</ion-label>
+    <p class="subtitle">Sign up to create your account</p>
+  </div>
+
+  <form [formGroup]="regForm">
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input type='text' label="Name" formControlName="fullname" labelPlacement="floating" placeholder="Name" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input type='Email' label="Email" formControlName="email" labelPlacement="floating" placeholder="Email" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input type='Password' label="Password" formControlName="password" labelPlacement="floating" placeholder="Password" class="input"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div class="signInLink">
+        <p>Already a member?<a style="color: #FFC33F;" [routerLink]="['/login']">Signin Now</a></p>
+      </div>
+    </div>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
+      <ion-fab-button (click)="signUp()">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+
+    </ion-fab>
+  </form>
+</ion-content>
+
+
+<!-- <ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Visit Ireland and you can visit so meny beautiful places..!!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="regForm">
+        <ion-item>
+          <ion-input type='text' label="Name" formControlName="fullname" labelPlacement="floating" placeholder="Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type='Email' label="Email" formControlName="email" labelPlacement="floating" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type='Password' label="Password" formControlName="password" labelPlacement="floating" placeholder="Password"></ion-input>
+        </ion-item>
+      </form>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button color="light" size="full" (click)="signUp()">Register</ion-button>
+</ion-content> -->

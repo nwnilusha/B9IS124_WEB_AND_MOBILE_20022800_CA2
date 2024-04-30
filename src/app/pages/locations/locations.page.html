@@ -1,0 +1,33 @@
+<ion-header [translucent]="false">
+  <ion-toolbar>
+    <ion-title>Visit Ireland</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title>Top Locations in Ireland</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-title style="margin-top: 20px;">Places To Visit</ion-title>
+  <ion-list>
+    <ion-row style="background-color: #dedede52; border-radius: 16px;" class="ion-margin" *ngFor="let location of locationsList">
+      <ion-col size="4">
+        <img style="width: 300px; height: 100px; object-fit: cover; border-radius: 5px;" src="{{location.image.url}}"/>
+      </ion-col>
+      <ion-col size="8" (click)="getDetails(location)">
+        <ion-label>
+          {{location.name}}
+          <p>{{location.url}}</p>
+          <p>{{location.address.addressCountry}}</p>
+          <p>{{location.address.addressLocality}}</p>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>
