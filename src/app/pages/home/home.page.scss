@@ -1,0 +1,55 @@
+.signupLink{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    justify-content: right;
+    margin-bottom: 1.5rem;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    right: 0;
+
+    a{
+        text-decoration: none;
+    }
+}
+
+.header{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    .title{
+        font-size: 2erm;
+    }
+    .subtitle{
+        color: gray;
+        font-size: 0.9erm;
+    }
+}
+
+.card{
+    width: 40%;
+    padding: 1.6rem 2rem;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+
+    .card_content{
+        text-align: center;
+
+        .title{
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+            color: #1d1d1d;
+        }
+    }
+}

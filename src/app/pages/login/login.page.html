@@ -1,0 +1,63 @@
+
+<ion-header [translucent]="true">
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="header">
+    <ion-label style="font-weight: 400; font-size: 2em; text-align: center; font-weight: bolder;">Welcome Travelers</ion-label>
+    <!-- <ion-title>Welcome Travelers</ion-title> -->
+    <!-- <ion-header class="title" collapse="condense">Welcome Travelers</ion-header> -->
+    <p class="subtitle">Sign in to access your account</p>
+  </div>
+
+  <form [formGroup]="loginForm">
+    <div class="ion-padding">
+      <ion-item>
+        <ion-input type='Email' label="Enter Email " labelPlacement="floating" placeholder="Email" formControlName="email" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input type='Password' label="Enter Password " labelPlacement="floating" placeholder="Password" formControlName="password" class="input"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+      <div class="forgotPassword">
+        <a style="color: #FFC33F;" [routerLink]="['/resetpassword']">Reset password?</a>
+      </div>
+      <div class="signupLink">
+        <p>New member?<a style="color: #FFC33F;" [routerLink]="['/register']">Signup Now</a></p>
+      </div>
+    </div>
+    <ion-fab vertical="bottom" horizontal="end" style="margin-bottom: 30px;">
+      <ion-fab-button (click)="login()">
+        <ion-icon name="chevron-forward"></ion-icon>
+      </ion-fab-button>
+
+    </ion-fab>
+  </form>
+  <!-- <div class="flex_center">
+    <form>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Visit Ireland</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <form [formGroup]="loginForm">
+            <ion-item>
+              <ion-input type='Email' label="Enter Email " labelPlacement="floating" placeholder="Email" formControlName="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type='Password' label="Enter Password " labelPlacement="floating" placeholder="Password" formControlName="password"></ion-input>
+            </ion-item>
+            <ion-button fill="clear" color="dark" size="full">Forgot Email/Password</ion-button>
+            <ion-button color="success" size="full" (click)="login()">Login</ion-button>
+            <ion-button fill="clear" color="success" size="full" (click)="register()">Register</ion-button>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </form>   
+  </div> -->
+  
+</ion-content>
